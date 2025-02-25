@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { login } from '../services/authService';
 import Input from '../components/Input';
 import Button from '../components/Button';
+import '../styles/Login.css';
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -20,12 +21,25 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100">
-      <div className="bg-white p-6 rounded-lg shadow-md w-80">
-        <h2 className="text-2xl font-semibold mb-4">Login</h2>
-        <Input type="email" name="email" placeholder="Usuário" value={email} onChange={(e) => setEmail(e.target.value)} />
-        <Input type="password" name="password" placeholder="Senha" value={password} onChange={(e) => setPassword(e.target.value)} />
-        <Button onClick={handleLogin} className="w-full mt-4 bg-blue-500 text-white">Entrar</Button>
+    <div className="login-container">
+      <div className="left-section">
+        <h1>Simplificamos juntos</h1>
+        <p>Supply Chain | Industrial | Systems</p>
+      </div>
+      <div className="right-section">
+        <div className="login-box">
+          <div className="logo-container">
+            <div className="logo">LOGO</div>
+          </div>
+          <h2>LOGIN</h2>
+          <Input type="email" name="email" placeholder="Usuário" value={email} onChange={(e) => setEmail(e.target.value)} className="input" />
+          <Input type="password" name="password" placeholder="Senha" value={password} onChange={(e) => setPassword(e.target.value)} className="input" />
+          <Button onClick={handleLogin} className="login-button">LOGAR</Button>
+          <div className="links">
+            <a href="#">ESQUECI MINHA SENHA</a>
+            <a href="#">CADASTRE-SE</a>
+          </div>
+        </div>
       </div>
     </div>
   );

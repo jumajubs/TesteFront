@@ -22,7 +22,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       });
       if (response.status === 200) {
         setIsAuthenticated(true);
-        navigate("/dashboard");
+        navigate("/users");
       }
     } catch (error) {
       alert("Erro ao fazer login");

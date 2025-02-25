@@ -38,5 +38,13 @@ O projeto deve rodar na porta 5173:
 ```bash
  http://localhost:5173/
 ```
+Exemplo de Usuário:
+```bash
+ eve.holt@reqres.in
+```
+Senha
+```bash
+ cityslicka
+```
 ![gif](https://github.com/jumajubs/TesteFront/blob/master/gif/Vite-React-TS-Google-Chrome-2025-02-25-03-33-25.gif)
 
